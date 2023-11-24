@@ -1,3 +1,20 @@
+div{
+  box-sizing: border-box;
+}
+
+.title{
+  display: flex;
+  padding: 20px;
+  background: black;
+  color: white;
+  width: 100%;
+}
+
+.box{
+  border-bottom: 2px solid black;
+  padding-left: 20px;
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +53,5 @@
     transform: rotate(360deg);
   }
 }
+
+
