@@ -15,6 +15,7 @@ function App() {
     <div className="container">
 
       <div>
+        <p>1151</p>
         <button onClick={() => {
           글제목[0] = '여자코트 추천';
           글제목변경(글제목)
