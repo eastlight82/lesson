@@ -7,7 +7,7 @@ import './App.css';
 
 
 function App() {
-  var [따봉,따변]=useState(0);
+  var [따봉,따변]=useState([0,0,0]);
   let [글제목, 글제목변경] = useState( ['남자코트 추천', '강남 우동맛집',
    '파이썬 독학'] );
 
@@ -29,7 +29,9 @@ function App() {
             return(
               <div className="box" key={i}>
                 <h3 onClick={() => {setModal(true); setTitle_num(i)}}>{a}
-                <span onClick={()=>{따변(따봉+1)}}> 👍 </span>{따봉}
+                <span onClick={()=>{
+                  따봉[i]+=1;
+                  따변(따봉)}}> 👍 </span>{따봉[i]}
                 </h3>
                 <p>{발행}</p>
                 <button onClick={() => {
@@ -44,7 +46,9 @@ function App() {
         </input>
         <button onClick={() => {
           글제목.push(새제목);
-          글제목변경(글제목)}}>글발행</button>
+          글제목변경(글제목)
+          따봉.push(0);
+          따변(따봉)}}>글발행</button>
      </div>
       
 
