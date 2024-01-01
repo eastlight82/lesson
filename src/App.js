@@ -8,6 +8,7 @@ import './App.css';
 
 function App() {
   var [따봉,따변]=useState([0,0,0]);
+  
   let [글제목, 글제목변경] = useState( ['남자코트 추천', '강남 우동맛집',
    '파이썬 독학'] );
 
